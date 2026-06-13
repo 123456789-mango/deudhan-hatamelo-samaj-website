@@ -21,10 +21,30 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+/* Force browsers (incl. Brave) to not apply device pixel scaling */
+:root {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
   overflow-x: hidden;
   width: 100%;
-  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+}
+
+/* Ensure sections stretch full viewport width */
+.hero,
+.section,
+.site-header,
+.site-footer {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 body {
